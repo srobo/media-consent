@@ -1,0 +1,3 @@
+[submodule "marketing"]
+	path = marketing
+	url = git://srobo.org/marketing.git
