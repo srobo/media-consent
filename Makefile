@@ -1,14 +1,12 @@
 all: form.pdf
 
 %.pdf: %.svg
-	inkscape -A $@ $?
-
-marketing/logos/sr-landscape-no-background-flat.pdf: marketing/logos
+	inkscape -A $@ $<
 
 marketing/logos:
 	git submodule update --init
 
-form.pdf: form.tex marketing/logos/sr-landscape-no-background-flat.pdf
+form.pdf: form.tex marketing/logos marketing/logos/sr-landscape-no-background-flat.pdf
 	pdflatex $<
 
 clean:
