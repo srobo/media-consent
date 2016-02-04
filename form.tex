@@ -5,7 +5,7 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{setspace}
-
+\usepackage{fancyhdr}
 
 %% form-like fields %%
 \newcommand{\checkbox}[1]{#1\hspace{0.2cm}\raisebox{-0.3mm}{$\square$}}
@@ -21,11 +21,16 @@
 %% page setup
 \setlength\parindent{0pt}
 
+\chead{}
+\renewcommand{\headrulewidth}{0pt}
+\lfoot{Student Robotics is a Charitable Incorporated Organisation registered in England and Wales with registration number 1163168, and registered office at 4 Bankside Place, Vale Terrace, London, N4 1LT.}
 
 %%% Docuement Begining %%%
 \begin{document}
 
-\pagestyle{empty}
+%\pagestyle{empty}
+\pagestyle{fancy}
+\pagenumbering{gobble}
 
 \begin{minipage}[c]{0.38\textwidth}
 \includegraphics[height=1.5cm]{marketing/logos/sr-landscape-no-background-flat.pdf}
