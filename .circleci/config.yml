@@ -1,0 +1,15 @@
+version: 2
+
+jobs:
+    build:
+        docker:
+            - image: theorangeone/docker-pandoc
+        steps:
+            - checkout
+            - run:
+                name: Checkout submodules
+                command: git submodule sync && git submodule update --init
+            - run: make
+            - store_artifacts:
+                path: form.pdf
+                destination: media-consent.pdf
