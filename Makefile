@@ -1,6 +1,9 @@
 all: form.pdf
 
-form.pdf: form.tex
+%.pdf: %.svg
+	inkscape -A $@ $<
+
+form.pdf: form.tex style/assets style/assets/logo-text.pdf
 	pdflatex $<
 
 clean:
